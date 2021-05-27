@@ -15,7 +15,7 @@
                                                          masto-poll-voted))
 
 (define (masto-poll-get domainOrApp pollID)
-  "View a a poll with the ID `pollID`.
+  "View a poll with the ID `pollID`.
 
 `domainOrApp` can be the instance domain as a String or a
 <mastodon-instance-application>, whose associated `domain` will be used instead.

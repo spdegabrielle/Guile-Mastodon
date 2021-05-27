@@ -136,7 +136,7 @@ A record object that can be returned by an API call.
 
 ### masto-poll-get
 ##### Summary
-View a a poll with the ID `pollID`.
+View a poll with the ID `pollID`.
 
 `domainOrApp` can be the instance domain as a String or a
 [`<mastodon-instance-application>`](auth.md#mastodon-instance-application), whose associated `domain` will be used instead.
