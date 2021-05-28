@@ -112,14 +112,34 @@
                                                  masto-results-statuses
                                                  masto-results-hashtags))
 
-(define* (masto-search mastoApp query #:key resolve    [limit 40]
-                                            [offset 0] following)
+(define* (masto-search mastoApp query #:key resolve    [limit 20]
+                                            [offset 0] following
+                                            accountID  maxID
+                                            minID      type       excludeUnreviewed)
+  "Search for content in accounts, statuses and hashtags via the permissions
+allowed to `mastoApp`.
+
+If no `limit` value is provided, the value 20 is used; the max. is 40,
+regardless of the value provided.
+
+If no `offset` value is provided, the value 0 is used.
+
+A <mastodon-results> is returned, based off of the search criteria.
+
+Find the original documentation [here](https://docs.joinmastodon.org/methods/search/)."
   (generate-masto-results
     (http 'get
       (string-append (masto-app-domain mastoApp) "/api/v2/search")
       #:token       (masto-app-token mastoApp)
-      #:queryParams `(("q"         ,query)
-                      ("resolve"   ,(boolean->string resolve))
-                      ("limit"     ,(number->string  limit))
-                      ("offset"    ,(number->string  offset))
-                      ("following" ,(boolean->string following))))))
+      #:queryParams `(("account_id"         ,accountID)
+                      ("max_id"             ,maxID)
+                      ("min_id"             ,minID)
+                      ("type"               ,type)  ;; need to add enum
+                      ("exclude_unreviewed" ,excludeUnreviewed)
+                      ("q"                  ,query)
+                      ("resolve"            ,(boolean->string resolve))
+                      ("limit"              ,(number->string  (if (> limit 40)
+                                                                  40
+                                                                limit)))
+                      ("offset"             ,(number->string  offset))
+                      ("following"          ,(boolean->string following))))))

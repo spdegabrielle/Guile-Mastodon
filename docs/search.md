@@ -1347,7 +1347,17 @@ A record object that can be returned by an API call.
 
 ### masto-search
 ##### Summary
-#f
+Search for content in accounts, statuses and hashtags via the permissions
+allowed to `mastoApp`.
+
+If no `limit` value is provided, the value 20 is used; the max. is 40,
+regardless of the value provided.
+
+If no `offset` value is provided, the value 0 is used.
+
+A [`<mastodon-results>`](#mastodon-results) is returned, based off of the search criteria.
+
+Find the original documentation [here](https://docs.joinmastodon.org/methods/search/).
 ##### Parameters
 > ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) `mastoApp` <br />
 > ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) `query` <br />
@@ -1355,6 +1365,11 @@ A record object that can be returned by an API call.
 > ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) `#:limit` (argument position 4) <br />
 > ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) `#:offset` (argument position 5) <br />
 > ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) `#:following` (argument position 6) <br />
+> ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) `#:accountID` (argument position 7) <br />
+> ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) `#:maxID` (argument position 8) <br />
+> ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) `#:minID` (argument position 9) <br />
+> ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) `#:type` (argument position 10) <br />
+> ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) `#:excludeUnreviewed` (argument position 11) <br />
 
 <br />
 
