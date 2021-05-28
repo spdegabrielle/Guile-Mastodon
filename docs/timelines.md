@@ -72,7 +72,7 @@
 66. [masto-convo-accounts](#masto-convo-accounts)
 67. [masto-convo-id](#masto-convo-id)
 68. [masto-convo-last-status](#masto-convo-last-status)
-69. [masto-convo-unread](#masto-convo-unread)
+69. [masto-convo-unread?](#masto-convo-unread?)
 70. [masto-convo?](#masto-convo?)
 71. [masto-emoji-shortcode](#masto-emoji-shortcode)
 72. [masto-emoji-static-url](#masto-emoji-static-url)
@@ -827,7 +827,7 @@ Find the original documentation [here](https://docs.joinmastodon.org/methods/tim
 
 <br />
 
-### masto-convo-unread
+### masto-convo-unread?
 ##### Summary
 #f
 ##### Parameters

@@ -169,7 +169,7 @@
             <mastodon-context> masto-context? masto-context-ancestors masto-context-descendants
             generate-masto-context
             <mastodon-conversation> masto-convo? masto-convo-id          masto-convo-accounts
-                                                 masto-convo-last-status masto-convo-unread
+                                                 masto-convo-last-status masto-convo-unread?
             generate-masto-convo
             generate-masto-convo-array))
 
@@ -952,7 +952,7 @@
   (id         masto-convo-id          masto-convo-id-set!)
   (accounts   masto-convo-accounts    masto-convo-accounts-set!)
   (lastStatus masto-convo-last-status masto-convo-last-status-set!)
-  (unread     masto-convo-unread      masto-convo-unread-set!))
+  (unread     masto-convo-unread?     masto-convo-unread-set!))
 
 (define (generate-masto-convo convo)
   (generate-masto-object make-masto-convo convo

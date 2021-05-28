@@ -120,7 +120,7 @@
                <mastodon-conversation> masto-convo? masto-convo-id
                                                     masto-convo-accounts
                                                     masto-convo-last-status
-                                                    masto-convo-unread))
+                                                    masto-convo-unread?))
 
 (define* (masto-timelines-home mastoApp #:key maxID sinceID
                                               minID [limit 20] local)
