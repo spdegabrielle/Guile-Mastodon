@@ -165,14 +165,13 @@
 159. [masto-status-create](#masto-status-create)
 160. [masto-status-delete](#masto-status-delete)
 161. [masto-status-get](#masto-status-get)
-162. [masto-status-get-card](#masto-status-get-card)
-163. [masto-status-get-context](#masto-status-get-context)
-164. [masto-status-get-favorited-by](#masto-status-get-favorited-by)
-165. [masto-status-get-reblogged-by](#masto-status-get-reblogged-by)
-166. [masto-status-pin](#masto-status-pin)
-167. [masto-status-reblog](#masto-status-reblog)
-168. [masto-status-unpin](#masto-status-unpin)
-169. [masto-status-unreblog](#masto-status-unreblog)
+162. [masto-status-get-context](#masto-status-get-context)
+163. [masto-status-get-favorited-by](#masto-status-get-favorited-by)
+164. [masto-status-get-reblogged-by](#masto-status-get-reblogged-by)
+165. [masto-status-pin](#masto-status-pin)
+166. [masto-status-reblog](#masto-status-reblog)
+167. [masto-status-unpin](#masto-status-unpin)
+168. [masto-status-unreblog](#masto-status-unreblog)
 
 
 <br />
@@ -1587,15 +1586,8 @@ A record object that can be returned by an API call.
 ### masto-status-get
 ##### Summary
 #f
-##### Parameters
-> ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) `domainOrApp` <br />
-> ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) `statusID` <br />
 
-<br />
 
-### masto-status-get-card
-##### Summary
-#f
 ##### Parameters
 > ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) `domainOrApp` <br />
 > ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) `statusID` <br />

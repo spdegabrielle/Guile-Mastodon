@@ -6,9 +6,9 @@
   #:use-module (srfi srfi-19)
   #:export (masto-status-get              masto-status-create
             masto-status-get-context      masto-status-delete
-            masto-status-get-card         masto-status-reblog
-            masto-status-get-reblogged-by masto-status-unreblog
-            masto-status-get-favorited-by masto-status-pin
+            masto-status-get-reblogged-by masto-status-reblog
+            masto-status-get-favorited-by masto-status-unreblog
+                                          masto-status-pin
                                           masto-status-unpin)
   #:re-export (<mastodon-pagination-object> masto-page? masto-page-objects
                                                         masto-page-prev
@@ -177,17 +177,6 @@
                  statusID
                  "/context"))))
 
-(define (masto-status-get-card domainOrApp statusID)
-  (generate-masto-card
-    (http 'get (string-append
-                 (if (masto-instance-app? domainOrApp)
-                     (masto-app-domain domainOrApp)
-                   (if (string-contains-ci domainOrApp "https://")
-                       domainOrApp
-                     (string-append/shared "https://" domainOrApp)))
-                 "/api/v1/statuses/"
-                 statusID
-                 "/card"))))
 
 (define* (masto-status-get-reblogged-by domainOrApp statusID #:optional [limit 40])
   (generate-masto-page
