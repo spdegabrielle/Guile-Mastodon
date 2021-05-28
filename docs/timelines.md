@@ -1448,6 +1448,7 @@ Find the original documentation [here](https://docs.joinmastodon.org/methods/tim
 > ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) `#:sinceID` (argument position 3) <br />
 > ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) `#:minID` (argument position 4) <br />
 > ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) `#:limit` (argument position 5) <br />
+> ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) `#:local` (argument position 6) <br />
 
 <br />
 

@@ -120,7 +120,8 @@
                                                     masto-convo-last-status
                                                     masto-convo-unread))
 
-(define* (masto-timelines-home mastoApp #:key maxID sinceID minID [limit 20])
+(define* (masto-timelines-home mastoApp #:key maxID sinceID
+                                              minID [limit 20] local)
   "Retrieve the home timeline associated with the user tied to `mastoApp`.
 
 If no `limit` value is provided, the value 20 is used.
@@ -137,7 +138,8 @@ Find the original documentation [here](https://docs.joinmastodon.org/methods/tim
       #:queryParams `((  "max_id" ,maxID)
                       ("since_id" ,sinceID)
                       (  "min_id" ,minID)
-                      ("limit"    ,(number->string limit))))))
+                      ("limit"    ,( number->string limit))
+                      ("local"    ,(boolean->string local))))))
 
 (define* (masto-conversations-all mastoApp #:key maxID sinceID minID [limit 20])
   "Retrieve all conversations associated with the user tied to `mastoApp`.
