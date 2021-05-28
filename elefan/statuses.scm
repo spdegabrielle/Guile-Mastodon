@@ -155,6 +155,18 @@
                                                                    masto-scheduled-status-media-attachments))
 
 (define (masto-status-get domainOrApp statusID)
+  "View an existing Fediverse status with the ID `statusID`.
+
+`domainOrApp` can be the instance domain as a String or a
+<mastodon-instance-application>, whose associated `domain` will be used instead.
+
+If the status in question is private, you will need to use a
+<mastodon-instance-application> for `domainOrApp` in order to determine if the
+user has permission to view the status.
+
+A <mastodon-status> is returned.
+
+Find the original documentation [here](https://docs.joinmastodon.org/methods/statuses/)."
   (generate-masto-status
     (http 'get (string-append
                  (if (masto-instance-app? domainOrApp)
@@ -166,6 +178,18 @@
                  statusID))))
 
 (define (masto-status-get-context domainOrApp statusID)
+  "View the statuses above and below the status with the ID `statusID`.
+
+`domainOrApp` can be the instance domain as a String or a
+<mastodon-instance-application>, whose associated `domain` will be used instead.
+
+If the status in question is private, you will need to use a
+<mastodon-instance-application> for `domainOrApp` in order to determine if the
+user has permission to view the status.
+
+A <mastodon-context> is returned.
+
+Find the original documentation [here](https://docs.joinmastodon.org/methods/statuses/)."
   (generate-masto-context
     (http 'get (string-append
                  (if (masto-instance-app? domainOrApp)

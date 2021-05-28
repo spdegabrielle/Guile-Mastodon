@@ -1585,9 +1585,18 @@ A record object that can be returned by an API call.
 
 ### masto-status-get
 ##### Summary
-#f
+View an existing Fediverse status with the ID `statusID`.
 
+`domainOrApp` can be the instance domain as a String or a
+[`<mastodon-instance-application>`](auth.md#mastodon-instance-application), whose associated `domain` will be used instead.
 
+If the status in question is private, you will need to use a
+[`<mastodon-instance-application>`](auth.md#mastodon-instance-application) for `domainOrApp` in order to determine if the
+user has permission to view the status.
+
+A [`<mastodon-status>`](#mastodon-status) is returned.
+
+Find the original documentation [here](https://docs.joinmastodon.org/methods/statuses/).
 ##### Parameters
 > ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) `domainOrApp` <br />
 > ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) `statusID` <br />
@@ -1596,7 +1605,18 @@ A record object that can be returned by an API call.
 
 ### masto-status-get-context
 ##### Summary
-#f
+View the statuses above and below the status with the ID `statusID`.
+
+`domainOrApp` can be the instance domain as a String or a
+[`<mastodon-instance-application>`](auth.md#mastodon-instance-application), whose associated `domain` will be used instead.
+
+If the status in question is private, you will need to use a
+[`<mastodon-instance-application>`](auth.md#mastodon-instance-application) for `domainOrApp` in order to determine if the
+user has permission to view the status.
+
+A [`<mastodon-context>`](#mastodon-context) is returned.
+
+Find the original documentation [here](https://docs.joinmastodon.org/methods/statuses/).
 ##### Parameters
 > ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) `domainOrApp` <br />
 > ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) `statusID` <br />
