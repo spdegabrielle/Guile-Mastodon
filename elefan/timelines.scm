@@ -4,6 +4,8 @@
   #:use-module (elefan utils)
   #:export (masto-timelines-home
             masto-conversations-all
+            masto-conversation-read
+            masto-conversation-delete
             masto-timelines-public
             masto-timelines-tag
             masto-timelines-list)
@@ -161,6 +163,33 @@ Find the original documentation [here](https://docs.joinmastodon.org/methods/tim
                                                                        40
                                                                      limit))))))
     generate-masto-convo-array))
+
+(define (masto-conversation-read mastoApp conversationID)
+  "Mark the conversation as read, for the user tied to `mastoApp`, which has the
+ID `conversationID`.
+
+A <mastodon-conversation> is returned.
+
+Find the original documentation [here](https://docs.joinmastodon.org/methods/timelines/conversations/)."
+  (generate-masto-convo
+    (http 'post
+      (string-append (masto-app-domain mastoApp) "/api/v1/conversations/"
+                     conversationID              "/read")
+      #:token (masto-app-token mastoApp))))
+
+(define (masto-conversation-delete mastoApp conversationID)
+  "Delete the conversation for the user tied to `mastoApp` which has the ID
+`conversationID`.
+
+This function, if successful, returns `#t`.
+
+Find the original documentation [here](https://docs.joinmastodon.org/methods/timelines/conversations/)."
+  (http 'delete (string-append
+                  (masto-app-domain mastoApp)
+                  "/api/v1/conversations/"
+                  conversationID)              #:token (masto-app-token mastoApp))
+
+  #t)
 
 (define* (masto-timelines-public domainOrApp #:key local     remote
                                                    onlyMedia maxID
