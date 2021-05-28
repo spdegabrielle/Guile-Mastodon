@@ -256,6 +256,31 @@ Find the original documentation [here](https://docs.joinmastodon.org/methods/sta
                                              language     poll
                                              pollOptions  pollExpiresIn
                                              pollMultiple pollHideTotals idempotencyKey)
+  "Post a new status for the user tied to `mastoApp`.
+
+For the status, a <mastodon-status> can be provided for `#:statusObject`;
+otherwise, `#:statusText`, `#:inReplyToID`, `#:mediaIDs`, `#:sensitive`,
+`#:spoilerText`, and `#:visibility` must be provided, instead. If
+`#:statusObject` is provided, the other parameters just listed will be ignored.
+
+`#:scheduledAt` can be a SRFI-19
+[date](https://www.gnu.org/software/guile/manual/html_node/SRFI_002d19-Date.html)
+object or a ISO 8601 Datetime string; if using a SRFI-19 date, the appropriately
+formatted string will be generated, for you.
+
+<mastodon-poll> can be provided for `#:poll`; otherwise, `#:pollOptions`,
+`#:pollExpiresIn`, `#:pollMultiple`, and `#:pollHideTotals` must be provided,
+instead. If `#:poll` is provided, the other parameters just listed will be
+ignored.
+
+`#:idempotencyKey` is used to prevent duplicate submissions of the same status.
+Idempotency keys are stored for up to 1 hour and can be any arbitrary string.
+Consider using a hash or UUID generated client-side.
+
+A <mastodon-status> is returned; if `#:scheduledAt` is provided, a
+<mastodon-scheduled-status> is returned, instead.
+
+Find the original documentation [here](https://docs.joinmastodon.org/methods/statuses/)."
   (let ([s `(("status"            ,(if statusObject
                                        (masto-status-content        statusObject)
                                      statusText))

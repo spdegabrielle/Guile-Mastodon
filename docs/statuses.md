@@ -1564,7 +1564,31 @@ A record object that can be returned by an API call.
 
 ### masto-status-create
 ##### Summary
-#f
+Post a new status for the user tied to `mastoApp`.
+
+For the status, a [`<mastodon-status>`](#mastodon-status) can be provided for `#:statusObject`;
+otherwise, `#:statusText`, `#:inReplyToID`, `#:mediaIDs`, `#:sensitive`,
+`#:spoilerText`, and `#:visibility` must be provided, instead. If
+`#:statusObject` is provided, the other parameters just listed will be ignored.
+
+`#:scheduledAt` can be a SRFI-19
+[date](https://www.gnu.org/software/guile/manual/html_node/SRFI_002d19-Date.html)
+object or a ISO 8601 Datetime string; if using a SRFI-19 date, the appropriately
+formatted string will be generated, for you.
+
+[`<mastodon-poll>`](#mastodon-poll) can be provided for `#:poll`; otherwise, `#:pollOptions`,
+`#:pollExpiresIn`, `#:pollMultiple`, and `#:pollHideTotals` must be provided,
+instead. If `#:poll` is provided, the other parameters just listed will be
+ignored.
+
+`#:idempotencyKey` is used to prevent duplicate submissions of the same status.
+Idempotency keys are stored for up to 1 hour and can be any arbitrary string.
+Consider using a hash or UUID generated client-side.
+
+A [`<mastodon-status>`](#mastodon-status) is returned; if `#:scheduledAt` is provided, a
+[`<mastodon-scheduled-status>`](#mastodon-scheduled-status) is returned, instead.
+
+Find the original documentation [here](https://docs.joinmastodon.org/methods/statuses/).
 ##### Parameters
 > ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) `mastoApp` <br />
 > ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) `#:statusObject` (argument position 2) <br />
