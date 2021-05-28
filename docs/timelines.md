@@ -1492,11 +1492,12 @@ Find the original documentation [here](https://docs.joinmastodon.org/methods/tim
 ##### Parameters
 > ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) `domainOrApp` <br />
 > ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) `#:local` (argument position 2) <br />
-> ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) `#:onlyMedia` (argument position 3) <br />
-> ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) `#:maxID` (argument position 4) <br />
-> ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) `#:sinceID` (argument position 5) <br />
-> ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) `#:minID` (argument position 6) <br />
-> ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) `#:limit` (argument position 7) <br />
+> ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) `#:remote` (argument position 3) <br />
+> ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) `#:onlyMedia` (argument position 4) <br />
+> ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) `#:maxID` (argument position 5) <br />
+> ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) `#:sinceID` (argument position 6) <br />
+> ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) `#:minID` (argument position 7) <br />
+> ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) `#:limit` (argument position 8) <br />
 
 <br />
 

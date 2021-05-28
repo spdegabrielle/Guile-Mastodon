@@ -162,8 +162,9 @@ Find the original documentation [here](https://docs.joinmastodon.org/methods/tim
                                                                      limit))))))
     generate-masto-convo-array))
 
-(define* (masto-timelines-public domainOrApp #:key local   onlyMedia maxID
-                                                   sinceID minID     [limit 20])
+(define* (masto-timelines-public domainOrApp #:key local     remote
+                                                   onlyMedia maxID
+                                                   sinceID   minID  [limit 20])
   "Retrieve the public timeline associated with instance.
 
 `domainOrApp` can be the instance domain as a String or a
@@ -191,6 +192,7 @@ Find the original documentation [here](https://docs.joinmastodon.org/methods/tim
           (string-append/shared "https://" domainOrApp)))
       "/api/v1/timelines/public"
       (assemble-params `(("local"      ,(boolean->string local))
+                         ("remote"     ,(boolean->string remote))
                          ("only_media" ,(boolean->string onlyMedia))
                          (  "max_id"   ,maxID)
                          ("since_id"   ,sinceID)
