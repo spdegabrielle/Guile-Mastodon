@@ -756,7 +756,14 @@ A record object that can be returned by an API call.
 
 ### masto-conversations-all
 ##### Summary
-#f
+Retrieve all conversations associated with the user tied to `mastoApp`.
+
+If no `limit` value is provided, the value 20 is used; the max. is 40,
+regardless of the value provided.
+
+A list of [`<mastodon-status>`](#mastodon-status)s are returned.
+
+Find the original documentation [here](https://docs.joinmastodon.org/methods/timelines/conversations/).
 ##### Parameters
 > ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) `mastoApp` <br />
 > ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) `#:maxID` (argument position 2) <br />
@@ -1426,7 +1433,15 @@ A record object that can be returned by an API call.
 
 ### masto-timelines-home
 ##### Summary
-#f
+Retrieve the home timeline associated with the user tied to `mastoApp`.
+
+If no `limit` value is provided, the value 20 is used.
+
+If no `local` value is provided, the value `#f` is used.
+
+A list of [`<mastodon-status>`](#mastodon-status)s are returned.
+
+Find the original documentation [here](https://docs.joinmastodon.org/methods/timelines/).
 ##### Parameters
 > ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) `mastoApp` <br />
 > ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) `#:maxID` (argument position 2) <br />
@@ -1438,7 +1453,13 @@ A record object that can be returned by an API call.
 
 ### masto-timelines-list
 ##### Summary
-#f
+Retrieve the statuses in the given list that has the ID `listID`.
+
+If no `limit` value is provided, the value 20 is used.
+
+A list of [`<mastodon-status>`](#mastodon-status)s are returned.
+
+Find the original documentation [here](https://docs.joinmastodon.org/methods/timelines/).
 ##### Parameters
 > ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) `mastoApp` <br />
 > ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) `listID` <br />
@@ -1451,7 +1472,22 @@ A record object that can be returned by an API call.
 
 ### masto-timelines-public
 ##### Summary
-#f
+Retrieve the public timeline associated with instance.
+
+`domainOrApp` can be the instance domain as a String or a
+[`<mastodon-instance-application>`](auth.md#mastodon-instance-application), whose associated `domain` will be used instead.
+
+If no `local` value is provided, the value `#f` is used.
+
+If no `remote` value is provided, the value `#f` is used.
+
+If no `onlyMedia` value is provided, the value `#f` is used.
+
+If no `limit` value is provided, the value 20 is used.
+
+A list of [`<mastodon-status>`](#mastodon-status)s are returned.
+
+Find the original documentation [here](https://docs.joinmastodon.org/methods/timelines/).
 ##### Parameters
 > ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) `domainOrApp` <br />
 > ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) `#:local` (argument position 2) <br />
@@ -1465,7 +1501,22 @@ A record object that can be returned by an API call.
 
 ### masto-timelines-tag
 ##### Summary
-#f
+Retrieve public statuses containing the given hashtag.
+
+`domainOrApp` can be the instance domain as a String or a
+[`<mastodon-instance-application>`](auth.md#mastodon-instance-application), whose associated `domain` will be used instead.
+
+If no `local` value is provided, the value `#f` is used.
+
+If no `remote` value is provided, the value `#f` is used.
+
+If no `onlyMedia` value is provided, the value `#f` is used.
+
+If no `limit` value is provided, the value 20 is used.
+
+A list of [`<mastodon-status>`](#mastodon-status)s are returned.
+
+Find the original documentation [here](https://docs.joinmastodon.org/methods/timelines/).
 ##### Parameters
 > ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) `domainOrApp` <br />
 > ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) `hashtag` <br />

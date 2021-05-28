@@ -121,6 +121,15 @@
                                                     masto-convo-unread))
 
 (define* (masto-timelines-home mastoApp #:key maxID sinceID minID [limit 20])
+  "Retrieve the home timeline associated with the user tied to `mastoApp`.
+
+If no `limit` value is provided, the value 20 is used.
+
+If no `local` value is provided, the value `#f` is used.
+
+A list of <mastodon-status>s are returned.
+
+Find the original documentation [here](https://docs.joinmastodon.org/methods/timelines/)."
   (generate-masto-status-array
     (http 'get
       (string-append (masto-app-domain mastoApp) "/api/v1/timelines/home")
@@ -131,6 +140,14 @@
                       ("limit"    ,(number->string limit))))))
 
 (define* (masto-conversations-all mastoApp #:key maxID sinceID minID [limit 20])
+  "Retrieve all conversations associated with the user tied to `mastoApp`.
+
+If no `limit` value is provided, the value 20 is used; the max. is 40,
+regardless of the value provided.
+
+A list of <mastodon-status>s are returned.
+
+Find the original documentation [here](https://docs.joinmastodon.org/methods/timelines/conversations/)."
   (generate-masto-page
     mastoApp
     'get
@@ -143,6 +160,22 @@
 
 (define* (masto-timelines-public domainOrApp #:key local   onlyMedia maxID
                                                    sinceID minID     [limit 20])
+  "Retrieve the public timeline associated with instance.
+
+`domainOrApp` can be the instance domain as a String or a
+<mastodon-instance-application>, whose associated `domain` will be used instead.
+
+If no `local` value is provided, the value `#f` is used.
+
+If no `remote` value is provided, the value `#f` is used.
+
+If no `onlyMedia` value is provided, the value `#f` is used.
+
+If no `limit` value is provided, the value 20 is used.
+
+A list of <mastodon-status>s are returned.
+
+Find the original documentation [here](https://docs.joinmastodon.org/methods/timelines/)."
   (generate-masto-page
     #f
     'get
@@ -164,6 +197,22 @@
 (define* (masto-timelines-tag domainOrApp hashtag #:key local onlyMedia
                                                         maxID sinceID
                                                         minID [limit 20])
+  "Retrieve public statuses containing the given hashtag.
+
+`domainOrApp` can be the instance domain as a String or a
+<mastodon-instance-application>, whose associated `domain` will be used instead.
+
+If no `local` value is provided, the value `#f` is used.
+
+If no `remote` value is provided, the value `#f` is used.
+
+If no `onlyMedia` value is provided, the value `#f` is used.
+
+If no `limit` value is provided, the value 20 is used.
+
+A list of <mastodon-status>s are returned.
+
+Find the original documentation [here](https://docs.joinmastodon.org/methods/timelines/)."
   (generate-masto-page
     #f
     'get
@@ -184,6 +233,13 @@
 
 (define* (masto-timelines-list mastoApp listID #:key maxID sinceID
                                                      minID [limit 20])
+  "Retrieve the statuses in the given list that has the ID `listID`.
+
+If no `limit` value is provided, the value 20 is used.
+
+A list of <mastodon-status>s are returned.
+
+Find the original documentation [here](https://docs.joinmastodon.org/methods/timelines/)."
   (generate-masto-page
     mastoApp
     'get
