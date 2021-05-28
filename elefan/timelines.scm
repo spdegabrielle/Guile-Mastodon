@@ -157,7 +157,9 @@ Find the original documentation [here](https://docs.joinmastodon.org/methods/tim
                    (assemble-params `((  "max_id" ,maxID)
                                       ("since_id" ,sinceID)
                                       (  "min_id" ,minID)
-                                      ("limit"    ,(number->string limit)))))
+                                      ("limit"    ,(number->string (if (> limit 40)
+                                                                       40
+                                                                     limit))))))
     generate-masto-convo-array))
 
 (define* (masto-timelines-public domainOrApp #:key local   onlyMedia maxID
