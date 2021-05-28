@@ -201,20 +201,28 @@ Find the original documentation [here](https://docs.joinmastodon.org/methods/sta
                  statusID
                  "/context"))))
 
+(define (masto-status-get-reblogged-by domainOrApp statusID)
+  "View who boosted the status that has the ID `statusID`.
 
-(define* (masto-status-get-reblogged-by domainOrApp statusID #:optional [limit 40])
-  (generate-masto-page
-    #f
-    'get
-    (string-append
-      (if (masto-instance-app? domainOrApp)
-          (masto-app-domain domainOrApp)
-        (if (string-contains-ci domainOrApp "https://")
-            domainOrApp
-          (string-append/shared "https://" domainOrApp))) "/api/v1/statuses/"
-      statusID                                            "/reblogged_by"
-      "?limit="                                           (number->string limit))
-    generate-masto-account-array))
+`domainOrApp` can be the instance domain as a String or a
+<mastodon-instance-application>, whose associated `domain` will be used instead.
+
+If the status in question is private, you will need to use a
+<mastodon-instance-application> for `domainOrApp` in order to determine if the
+user has permission to view the status.
+
+A list of <mastodon-account>s is returned.
+
+Find the original documentation [here](https://docs.joinmastodon.org/methods/statuses/)."
+  (generate-masto-account-array
+    (http 'get
+      (string-append
+        (if (masto-instance-app? domainOrApp)
+            (masto-app-domain domainOrApp)
+          (if (string-contains-ci domainOrApp "https://")
+              domainOrApp
+            (string-append/shared "https://" domainOrApp))) "/api/v1/statuses/"
+        statusID                                            "/reblogged_by"))))
 
 (define* (masto-status-get-favorited-by domainOrApp statusID #:optional [limit 40])
   (generate-masto-page

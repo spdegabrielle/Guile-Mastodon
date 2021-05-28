@@ -1635,11 +1635,21 @@ Find the original documentation [here](https://docs.joinmastodon.org/methods/sta
 
 ### masto-status-get-reblogged-by
 ##### Summary
-#f
+View who boosted the status that has the ID `statusID`.
+
+`domainOrApp` can be the instance domain as a String or a
+[`<mastodon-instance-application>`](auth.md#mastodon-instance-application), whose associated `domain` will be used instead.
+
+If the status in question is private, you will need to use a
+[`<mastodon-instance-application>`](auth.md#mastodon-instance-application) for `domainOrApp` in order to determine if the
+user has permission to view the status.
+
+A list of [`<mastodon-account>`](#mastodon-account)s is returned.
+
+Find the original documentation [here](https://docs.joinmastodon.org/methods/statuses/).
 ##### Parameters
 > ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) `domainOrApp` <br />
 > ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) `statusID` <br />
-> ![#c5f015](https://placehold.it/15/c5f015/000000?text=+) `[limit]` <br />
 
 <br />
 
