@@ -162,16 +162,18 @@
 156. [masto-status-url](#masto-status-url)
 157. [masto-status-visibility](#masto-status-visibility)
 158. [masto-status?](#masto-status?)
-159. [masto-status-create](#masto-status-create)
-160. [masto-status-delete](#masto-status-delete)
-161. [masto-status-get](#masto-status-get)
-162. [masto-status-get-context](#masto-status-get-context)
-163. [masto-status-get-favorited-by](#masto-status-get-favorited-by)
-164. [masto-status-get-reblogged-by](#masto-status-get-reblogged-by)
-165. [masto-status-pin](#masto-status-pin)
-166. [masto-status-reblog](#masto-status-reblog)
-167. [masto-status-unpin](#masto-status-unpin)
-168. [masto-status-unreblog](#masto-status-unreblog)
+159. [masto-status-bookmark](#masto-status-bookmark)
+160. [masto-status-create](#masto-status-create)
+161. [masto-status-delete](#masto-status-delete)
+162. [masto-status-get](#masto-status-get)
+163. [masto-status-get-context](#masto-status-get-context)
+164. [masto-status-get-favorited-by](#masto-status-get-favorited-by)
+165. [masto-status-get-reblogged-by](#masto-status-get-reblogged-by)
+166. [masto-status-pin](#masto-status-pin)
+167. [masto-status-reblog](#masto-status-reblog)
+168. [masto-status-unbookmark](#masto-status-unbookmark)
+169. [masto-status-unpin](#masto-status-unpin)
+170. [masto-status-unreblog](#masto-status-unreblog)
 
 
 <br />
@@ -1551,6 +1553,15 @@ A record object that can be returned by an API call.
 
 <br />
 
+### masto-status-bookmark
+##### Summary
+#f
+##### Parameters
+> ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) `mastoApp` <br />
+> ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) `statusID` <br />
+
+<br />
+
 ### masto-status-create
 ##### Summary
 #f
@@ -1673,6 +1684,15 @@ Find the original documentation [here](https://docs.joinmastodon.org/methods/sta
 <br />
 
 ### masto-status-reblog
+##### Summary
+#f
+##### Parameters
+> ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) `mastoApp` <br />
+> ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) `statusID` <br />
+
+<br />
+
+### masto-status-unbookmark
 ##### Summary
 #f
 ##### Parameters

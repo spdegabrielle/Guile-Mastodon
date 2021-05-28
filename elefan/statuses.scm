@@ -8,6 +8,8 @@
             masto-status-get-context      masto-status-delete
             masto-status-get-reblogged-by masto-status-reblog
             masto-status-get-favorited-by masto-status-unreblog
+                                          masto-status-bookmark
+                                          masto-status-unbookmark
                                           masto-status-pin
                                           masto-status-unpin)
   #:re-export (<mastodon-pagination-object> masto-page? masto-page-objects
@@ -379,6 +381,20 @@ Find the original documentation [here](https://docs.joinmastodon.org/methods/sta
     (http 'post
       (string-append (masto-app-domain mastoApp) "/api/v1/statuses/"
                      statusID                    "/unreblog")
+      #:token (masto-app-token mastoApp))))
+
+(define (masto-status-bookmark mastoApp statusID)
+  (generate-masto-status
+    (http 'post
+      (string-append (masto-app-domain mastoApp) "/api/v1/statuses/"
+                     statusID                    "/bookmark")
+      #:token (masto-app-token mastoApp))))
+
+(define (masto-status-unbookmark mastoApp statusID)
+  (generate-masto-status
+    (http 'post
+      (string-append (masto-app-domain mastoApp) "/api/v1/statuses/"
+                     statusID                    "/unbookmark")
       #:token (masto-app-token mastoApp))))
 
 (define (masto-status-pin mastoApp statusID)
