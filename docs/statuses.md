@@ -1555,7 +1555,12 @@ A record object that can be returned by an API call.
 
 ### masto-status-bookmark
 ##### Summary
-#f
+Bookmark the status, for the user tied to `mastoApp`, which has the ID
+`statusID`.
+
+A [`<mastodon-status>`](#mastodon-status) is returned of the status which was bookmarked.
+
+Find the original documentation [here](https://docs.joinmastodon.org/methods/statuses/).
 ##### Parameters
 > ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) `mastoApp` <br />
 > ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) `statusID` <br />
@@ -1611,7 +1616,12 @@ Find the original documentation [here](https://docs.joinmastodon.org/methods/sta
 
 ### masto-status-delete
 ##### Summary
-#f
+Delete the status for the user tied to `mastoApp` which has the ID
+`statusID`.
+
+This function, if successful, returns `#t`.
+
+Find the original documentation [here](https://docs.joinmastodon.org/methods/statuses/).
 ##### Parameters
 > ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) `mastoApp` <br />
 > ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) `statusID` <br />
@@ -1700,7 +1710,11 @@ Find the original documentation [here](https://docs.joinmastodon.org/methods/sta
 
 ### masto-status-pin
 ##### Summary
-#f
+Pin the status, for the user tied to `mastoApp`, which has the ID `statusID`.
+
+A [`<mastodon-status>`](#mastodon-status) is returned of the status which was pinned.
+
+Find the original documentation [here](https://docs.joinmastodon.org/methods/statuses/).
 ##### Parameters
 > ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) `mastoApp` <br />
 > ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) `statusID` <br />
@@ -1709,7 +1723,13 @@ Find the original documentation [here](https://docs.joinmastodon.org/methods/sta
 
 ### masto-status-reblog
 ##### Summary
-#f
+Reblog the status, for the user tied to `mastoApp`, which has the ID
+`statusID`.
+
+A [`<mastodon-status>`](#mastodon-status) is returned with the ID of the boosted status being
+retrievable via the [`[`masto-status-reblog`](#masto-status-reblog)-status`](#[`masto-status-reblog`](#masto-status-reblog)-status) function.
+
+Find the original documentation [here](https://docs.joinmastodon.org/methods/statuses/).
 ##### Parameters
 > ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) `mastoApp` <br />
 > ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) `statusID` <br />
@@ -1718,7 +1738,12 @@ Find the original documentation [here](https://docs.joinmastodon.org/methods/sta
 
 ### masto-status-unbookmark
 ##### Summary
-#f
+Unbookmark the status, for the user tied to `mastoApp`, which has the ID
+`statusID`.
+
+A [`<mastodon-status>`](#mastodon-status) is returned of the status which was unbookmarked.
+
+Find the original documentation [here](https://docs.joinmastodon.org/methods/statuses/).
 ##### Parameters
 > ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) `mastoApp` <br />
 > ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) `statusID` <br />
@@ -1727,7 +1752,11 @@ Find the original documentation [here](https://docs.joinmastodon.org/methods/sta
 
 ### masto-status-unpin
 ##### Summary
-#f
+Unpin the status, for the user tied to `mastoApp`, which has the ID `statusID`.
+
+A [`<mastodon-status>`](#mastodon-status) is returned of the status which was unpinned.
+
+Find the original documentation [here](https://docs.joinmastodon.org/methods/statuses/).
 ##### Parameters
 > ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) `mastoApp` <br />
 > ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) `statusID` <br />
@@ -1736,7 +1765,12 @@ Find the original documentation [here](https://docs.joinmastodon.org/methods/sta
 
 ### masto-status-unreblog
 ##### Summary
-#f
+Unreblog the status, for the user tied to `mastoApp`, which has the ID
+`statusID`.
+
+A [`<mastodon-status>`](#mastodon-status) is returned of the status which was unreblogged.
+
+Find the original documentation [here](https://docs.joinmastodon.org/methods/statuses/).
 ##### Parameters
 > ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) `mastoApp` <br />
 > ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) `statusID` <br />

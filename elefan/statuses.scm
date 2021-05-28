@@ -388,6 +388,12 @@ Find the original documentation [here](https://docs.joinmastodon.org/methods/sta
                #:idempotencyKey (if idempotencyKey idempotencyKey #f)))])))
 
 (define (masto-status-delete mastoApp statusID)
+  "Delete the status for the user tied to `mastoApp` which has the ID
+`statusID`.
+
+This function, if successful, returns `#t`.
+
+Find the original documentation [here](https://docs.joinmastodon.org/methods/statuses/)."
   (http 'delete
     (string-append (masto-app-domain mastoApp) "/api/v1/statuses/" statusID)
     #:token (masto-app-token mastoApp))
@@ -395,6 +401,13 @@ Find the original documentation [here](https://docs.joinmastodon.org/methods/sta
   #t)
 
 (define (masto-status-reblog mastoApp statusID)
+  "Reblog the status, for the user tied to `mastoApp`, which has the ID
+`statusID`.
+
+A <mastodon-status> is returned with the ID of the boosted status being
+retrievable via the masto-status-reblog-status function.
+
+Find the original documentation [here](https://docs.joinmastodon.org/methods/statuses/)."
   (generate-masto-status
     (http 'post
       (string-append (masto-app-domain mastoApp) "/api/v1/statuses/"
@@ -402,6 +415,12 @@ Find the original documentation [here](https://docs.joinmastodon.org/methods/sta
       #:token (masto-app-token mastoApp))))
 
 (define (masto-status-unreblog mastoApp statusID)
+  "Unreblog the status, for the user tied to `mastoApp`, which has the ID
+`statusID`.
+
+A <mastodon-status> is returned of the status which was unreblogged.
+
+Find the original documentation [here](https://docs.joinmastodon.org/methods/statuses/)."
   (generate-masto-status
     (http 'post
       (string-append (masto-app-domain mastoApp) "/api/v1/statuses/"
@@ -409,6 +428,12 @@ Find the original documentation [here](https://docs.joinmastodon.org/methods/sta
       #:token (masto-app-token mastoApp))))
 
 (define (masto-status-bookmark mastoApp statusID)
+  "Bookmark the status, for the user tied to `mastoApp`, which has the ID
+`statusID`.
+
+A <mastodon-status> is returned of the status which was bookmarked.
+
+Find the original documentation [here](https://docs.joinmastodon.org/methods/statuses/)."
   (generate-masto-status
     (http 'post
       (string-append (masto-app-domain mastoApp) "/api/v1/statuses/"
@@ -416,6 +441,12 @@ Find the original documentation [here](https://docs.joinmastodon.org/methods/sta
       #:token (masto-app-token mastoApp))))
 
 (define (masto-status-unbookmark mastoApp statusID)
+  "Unbookmark the status, for the user tied to `mastoApp`, which has the ID
+`statusID`.
+
+A <mastodon-status> is returned of the status which was unbookmarked.
+
+Find the original documentation [here](https://docs.joinmastodon.org/methods/statuses/)."
   (generate-masto-status
     (http 'post
       (string-append (masto-app-domain mastoApp) "/api/v1/statuses/"
@@ -423,6 +454,11 @@ Find the original documentation [here](https://docs.joinmastodon.org/methods/sta
       #:token (masto-app-token mastoApp))))
 
 (define (masto-status-pin mastoApp statusID)
+  "Pin the status, for the user tied to `mastoApp`, which has the ID `statusID`.
+
+A <mastodon-status> is returned of the status which was pinned.
+
+Find the original documentation [here](https://docs.joinmastodon.org/methods/statuses/)."
   (generate-masto-status
     (http 'post
       (string-append (masto-app-domain mastoApp) "/api/v1/statuses/"
@@ -430,6 +466,11 @@ Find the original documentation [here](https://docs.joinmastodon.org/methods/sta
       #:token (masto-app-token mastoApp))))
 
 (define (masto-status-unpin mastoApp statusID)
+  "Unpin the status, for the user tied to `mastoApp`, which has the ID `statusID`.
+
+A <mastodon-status> is returned of the status which was unpinned.
+
+Find the original documentation [here](https://docs.joinmastodon.org/methods/statuses/)."
   (generate-masto-status
     (http 'post
       (string-append (masto-app-domain mastoApp) "/api/v1/statuses/"
