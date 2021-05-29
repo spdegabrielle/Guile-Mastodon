@@ -26,14 +26,14 @@
                                               masto-field-verified-at
             <mastodon-account> masto-account? masto-account-id              masto-account-username
                                               masto-account-acct            masto-account-display-name
-                                              masto-account-locked?         masto-account-created-at
+                                              masto-account-locked?         masto-account-bot?
+                                              masto-account-discoverable?   masto-account-created-at
                                               masto-account-followers-count masto-account-following-count
                                               masto-account-statuses-count  masto-account-note
                                               masto-account-url             masto-account-avatar
                                               masto-account-avatar-static   masto-account-header
                                               masto-account-header-static   masto-account-emojis
                                               masto-account-moved           masto-account-fields
-                                              masto-account-bot?
             generate-masto-account
             generate-masto-account-array
             <mastodon-relationship> masto-relationship? masto-relationship-id

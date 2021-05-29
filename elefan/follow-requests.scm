@@ -20,6 +20,8 @@
                                                  masto-account-acct
                                                  masto-account-display-name
                                                  masto-account-locked?
+                                                 masto-account-bot?
+                                                 masto-account-discoverable?
                                                  masto-account-created-at
                                                  masto-account-followers-count
                                                  masto-account-following-count
@@ -32,8 +34,7 @@
                                                  masto-account-header-static
                                                  masto-account-emojis
                                                  masto-account-moved
-                                                 masto-account-fields
-                                                 masto-account-bot?))
+                                                 masto-account-fields))
 
 (define* (masto-follow-requests-all mastoApp #:optional [limit 40])
   "Retrieve all follow requests made to the user tied to `mastoApp`.
