@@ -39,7 +39,7 @@
                                                  masto-account-emojis
                                                  masto-account-moved
                                                  masto-account-fields
-                                                 masto-account-bot
+                                                 masto-account-bot?
                <mastodon-list> masto-list? masto-list-id masto-list-title))
 
 (define (masto-lists-all mastoApp)

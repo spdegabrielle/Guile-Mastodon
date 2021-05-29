@@ -33,7 +33,7 @@
                                               masto-account-avatar-static   masto-account-header
                                               masto-account-header-static   masto-account-emojis
                                               masto-account-moved           masto-account-fields
-                                              masto-account-bot
+                                              masto-account-bot?
             generate-masto-account
             generate-masto-account-array
             <mastodon-relationship> masto-relationship? masto-relationship-id
@@ -369,7 +369,7 @@
   (emojis         masto-account-emojis          masto-account-emojis-set!)
   (moved          masto-account-moved           masto-account-moved-set!)
   (fields         masto-account-fields          masto-account-fields-set!)
-  (bot            masto-account-bot             masto-account-bot-set!))
+  (bot            masto-account-bot?            masto-account-bot-set!))
 
 (define (generate-masto-account account)
   (generate-masto-object make-masto-account account

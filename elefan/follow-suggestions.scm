@@ -29,7 +29,7 @@
                                                  masto-account-emojis
                                                  masto-account-moved
                                                  masto-account-fields
-                                                 masto-account-bot))
+                                                 masto-account-bot?))
 
 (define (masto-follow-suggestions-all mastoApp)
   "Retrieve all follow suggestions for the user tied to `mastoApp`.

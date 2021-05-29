@@ -11,7 +11,7 @@
 5. [masto-account-acct](#masto-account-acct)
 6. [masto-account-avatar](#masto-account-avatar)
 7. [masto-account-avatar-static](#masto-account-avatar-static)
-8. [masto-account-bot](#masto-account-bot)
+8. [masto-account-bot?](#masto-account-bot)
 9. [masto-account-created-at](#masto-account-created-at)
 10. [masto-account-display-name](#masto-account-display-name)
 11. [masto-account-emojis](#masto-account-emojis)
@@ -133,7 +133,7 @@ A record object that can be returned by an API call.
 
 <br />
 
-### masto-account-bot
+### masto-account-bot?
 ##### Summary
 #f
 ##### Parameters

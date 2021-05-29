@@ -31,7 +31,7 @@
                                                  masto-account-emojis
                                                  masto-account-moved
                                                  masto-account-fields
-                                                 masto-account-bot
+                                                 masto-account-bot?
                <mastodon-meta-subtree> masto-meta-subtree? masto-meta-subtree-width
                                                            masto-meta-subtree-height
                                                            masto-meta-subtree-size

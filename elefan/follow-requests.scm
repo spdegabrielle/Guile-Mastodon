@@ -33,7 +33,7 @@
                                                  masto-account-emojis
                                                  masto-account-moved
                                                  masto-account-fields
-                                                 masto-account-bot))
+                                                 masto-account-bot?))
 
 (define* (masto-follow-requests-all mastoApp #:optional [limit 40])
   "Retrieve all follow requests made to the user tied to `mastoApp`.

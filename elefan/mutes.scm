@@ -32,7 +32,7 @@
                                                  masto-account-emojis
                                                  masto-account-moved
                                                  masto-account-fields
-                                                 masto-account-bot
+                                                 masto-account-bot?
                <mastodon-relationship> masto-relationship? masto-relationship-id
                                                            masto-relationship-following
                                                            masto-relationship-followed-by
