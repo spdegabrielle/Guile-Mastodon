@@ -14,48 +14,49 @@
 8. [masto-account-avatar-static](#masto-account-avatar-static)
 9. [masto-account-bot?](#masto-account-bot)
 10. [masto-account-created-at](#masto-account-created-at)
-11. [masto-account-display-name](#masto-account-display-name)
-12. [masto-account-emojis](#masto-account-emojis)
-13. [masto-account-fields](#masto-account-fields)
-14. [masto-account-followers-count](#masto-account-followers-count)
-15. [masto-account-following-count](#masto-account-following-count)
-16. [masto-account-header](#masto-account-header)
-17. [masto-account-header-static](#masto-account-header-static)
-18. [masto-account-id](#masto-account-id)
-19. [masto-account-locked?](#masto-account-locked)
-20. [masto-account-moved](#masto-account-moved)
-21. [masto-account-note](#masto-account-note)
-22. [masto-account-statuses-count](#masto-account-statuses-count)
-23. [masto-account-url](#masto-account-url)
-24. [masto-account-username](#masto-account-username)
-25. [masto-account?](#masto-account)
-26. [masto-emoji-shortcode](#masto-emoji-shortcode)
-27. [masto-emoji-static-url](#masto-emoji-static-url)
-28. [masto-emoji-url](#masto-emoji-url)
-29. [masto-emoji-visible-in-picker?](#masto-emoji-visible-in-picker)
-30. [masto-emoji?](#masto-emoji)
-31. [masto-field-name](#masto-field-name)
-32. [masto-field-value](#masto-field-value)
-33. [masto-field-verified-at](#masto-field-verified-at)
-34. [masto-field?](#masto-field)
-35. [masto-page-next](#masto-page-next)
-36. [masto-page-objects](#masto-page-objects)
-37. [masto-page-prev](#masto-page-prev)
-38. [masto-page?](#masto-page)
-39. [masto-relationship-blocking](#masto-relationship-blocking)
-40. [masto-relationship-domain-blocking](#masto-relationship-domain-blocking)
-41. [masto-relationship-endorsed](#masto-relationship-endorsed)
-42. [masto-relationship-followed-by](#masto-relationship-followed-by)
-43. [masto-relationship-following](#masto-relationship-following)
-44. [masto-relationship-id](#masto-relationship-id)
-45. [masto-relationship-muting](#masto-relationship-muting)
-46. [masto-relationship-muting-notifications](#masto-relationship-muting-notifications)
-47. [masto-relationship-requested](#masto-relationship-requested)
-48. [masto-relationship-showing-reblogs](#masto-relationship-showing-reblogs)
-49. [masto-relationship?](#masto-relationship)
-50. [masto-block-account](#masto-block-account)
-51. [masto-blocks-all](#masto-blocks-all)
-52. [masto-unblock-account](#masto-unblock-account)
+11. [masto-account-discoverable?](#masto-account-discoverable)
+12. [masto-account-display-name](#masto-account-display-name)
+13. [masto-account-emojis](#masto-account-emojis)
+14. [masto-account-fields](#masto-account-fields)
+15. [masto-account-followers-count](#masto-account-followers-count)
+16. [masto-account-following-count](#masto-account-following-count)
+17. [masto-account-header](#masto-account-header)
+18. [masto-account-header-static](#masto-account-header-static)
+19. [masto-account-id](#masto-account-id)
+20. [masto-account-locked?](#masto-account-locked)
+21. [masto-account-moved](#masto-account-moved)
+22. [masto-account-note](#masto-account-note)
+23. [masto-account-statuses-count](#masto-account-statuses-count)
+24. [masto-account-url](#masto-account-url)
+25. [masto-account-username](#masto-account-username)
+26. [masto-account?](#masto-account)
+27. [masto-emoji-shortcode](#masto-emoji-shortcode)
+28. [masto-emoji-static-url](#masto-emoji-static-url)
+29. [masto-emoji-url](#masto-emoji-url)
+30. [masto-emoji-visible-in-picker?](#masto-emoji-visible-in-picker)
+31. [masto-emoji?](#masto-emoji)
+32. [masto-field-name](#masto-field-name)
+33. [masto-field-value](#masto-field-value)
+34. [masto-field-verified-at](#masto-field-verified-at)
+35. [masto-field?](#masto-field)
+36. [masto-page-next](#masto-page-next)
+37. [masto-page-objects](#masto-page-objects)
+38. [masto-page-prev](#masto-page-prev)
+39. [masto-page?](#masto-page)
+40. [masto-relationship-blocking](#masto-relationship-blocking)
+41. [masto-relationship-domain-blocking](#masto-relationship-domain-blocking)
+42. [masto-relationship-endorsed](#masto-relationship-endorsed)
+43. [masto-relationship-followed-by](#masto-relationship-followed-by)
+44. [masto-relationship-following](#masto-relationship-following)
+45. [masto-relationship-id](#masto-relationship-id)
+46. [masto-relationship-muting](#masto-relationship-muting)
+47. [masto-relationship-muting-notifications](#masto-relationship-muting-notifications)
+48. [masto-relationship-requested](#masto-relationship-requested)
+49. [masto-relationship-showing-reblogs](#masto-relationship-showing-reblogs)
+50. [masto-relationship?](#masto-relationship)
+51. [masto-block-account](#masto-block-account)
+52. [masto-blocks-all](#masto-blocks-all)
+53. [masto-unblock-account](#masto-unblock-account)
 
 
 <br />
@@ -69,6 +70,8 @@ A record object that can be returned by an API call.
 > `acct` <br />
 > `displayName` <br />
 > `locked` <br />
+> `bot` <br />
+> `discoverable` <br />
 > `createdAt` <br />
 > `followersCount` <br />
 > `followingCount` <br />
@@ -82,7 +85,6 @@ A record object that can be returned by an API call.
 > `emojis` <br />
 > `moved` <br />
 > `fields` <br />
-> `bot` <br />
 
 <br />
 
@@ -171,6 +173,14 @@ A record object that can be returned by an API call.
 <br />
 
 ### masto-account-created-at
+##### Summary
+#f
+##### Parameters
+> ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) `s` <br />
+
+<br />
+
+### masto-account-discoverable?
 ##### Summary
 #f
 ##### Parameters
