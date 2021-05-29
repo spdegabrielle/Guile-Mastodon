@@ -91,3 +91,17 @@ Find the original documentation within [this page](https://docs.joinmastodon.org
                  (masto-app-domain mastoApp)
                  "/api/v1/accounts/verify_credentials") #:token (masto-app-token
                                                                   mastoApp))))
+
+;; (define* (masto-account-update-creds mastoApp)
+;;   "Update the display and preferences for the user tied to `mastoApp`.
+
+;; A <mastodon-account> of the user, with `source`, is returned.
+
+;; Find the original documentation within [this page](https://docs.joinmastodon.org/methods/accounts/)."
+;;   (generate-masto-account
+;;     (http 'patch
+;;       (string-append
+;;         (masto-app-domain mastoApp)
+;;         "/api/v1/accounts/update_credentials")
+;;       #:token       (masto-app-token mastoApp)
+;;       #:queryParams s)))
