@@ -344,18 +344,19 @@
   (verifiedAt masto-field-verified-at masto-field-verified-at-set!))
 
 (define-record-type <mastodon-account>
-  (make-masto-account id             username       acct
-                      displayName    locked         createdAt
-                      followersCount followingCount statusesCount
-                      note           url            avatar
-                      avatarStatic   header         headerStatic
-                      emojis         moved          fields        bot)
+  (make-masto-account id             username       acct          displayName
+                      locked         bot            discoverable  createdAt
+                      followersCount followingCount statusesCount note
+                      url            avatar         avatarStatic  header
+                      headerStatic   emojis         moved         fields)
   masto-account?
   (id             masto-account-id              masto-account-id-set!)
   (username       masto-account-username        masto-account-username-set!)
   (acct           masto-account-acct            masto-account-acct-set!)
   (displayName    masto-account-display-name    masto-account-display-name-set!)
   (locked         masto-account-locked?         masto-account-locked-set!)
+  (bot            masto-account-bot?            masto-account-bot-set!)
+  (discoverable   masto-account-discoverable?   masto-account-discoverable-set!)
   (createdAt      masto-account-created-at      masto-account-created-at-set!)
   (followersCount masto-account-followers-count masto-account-followers-count-set!)
   (followingCount masto-account-following-count masto-account-following-count-set!)
@@ -368,8 +369,7 @@
   (headerStatic   masto-account-header-static   masto-account-header-static-set!)
   (emojis         masto-account-emojis          masto-account-emojis-set!)
   (moved          masto-account-moved           masto-account-moved-set!)
-  (fields         masto-account-fields          masto-account-fields-set!)
-  (bot            masto-account-bot?            masto-account-bot-set!))
+  (fields         masto-account-fields          masto-account-fields-set!))
 
 (define (generate-masto-account account)
   (generate-masto-object make-masto-account account
@@ -378,6 +378,8 @@
     ["acct"]
     ["display_name"]
     ["locked"]
+    ["bot"]
+    ["discoverable"]
     ["created_at"      masto-string->date]
     ["followers_count"]
     ["following_count"]
@@ -400,8 +402,7 @@
                                 ["verified_at" masto-string->date])
                               finalFieldsList))
                           '()
-                          <>)]
-    ["bot"]))
+                          <>)]))
 
 (define (generate-masto-account-array accounts)
   (generate-masto-object-array accounts generate-masto-account))
