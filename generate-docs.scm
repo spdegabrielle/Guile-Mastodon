@@ -128,11 +128,23 @@
                         #\>)
                       "\\>"))
               (disp "](#")
-              (disp (string-join
-                      (string-split
-                        (string-join (string-split exportName #\<) "")
-                        #\>)
-                      ""))
+              (disp (let* ([removedBrackets (string-join
+                                              (string-split
+                                                (string-join
+                                                  (string-split exportName #\<)
+                                                  "")
+                                                #\>)
+                                              "")]
+                           [len             (string-length removedBrackets)])
+                      (substring
+                        removedBrackets
+                        0
+                        ((if (= (or
+                                  (string-index removedBrackets #\?)
+                                  (string-index removedBrackets #\!)
+                                  -1)                                 (1- len))
+                             1-
+                           identity) len))))
               (disp ")")
               (newln))
             exports
