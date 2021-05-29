@@ -31,6 +31,7 @@
                                                  masto-account-followers-count
                                                  masto-account-following-count
                                                  masto-account-statuses-count
+                                                 masto-account-last-status-at
                                                  masto-account-note
                                                  masto-account-url
                                                  masto-account-avatar
