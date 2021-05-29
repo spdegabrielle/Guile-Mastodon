@@ -25,41 +25,42 @@
 19. [masto-account-header](#masto-account-header)
 20. [masto-account-header-static](#masto-account-header-static)
 21. [masto-account-id](#masto-account-id)
-22. [masto-account-locked?](#masto-account-locked)
-23. [masto-account-moved](#masto-account-moved)
-24. [masto-account-note](#masto-account-note)
-25. [masto-account-statuses-count](#masto-account-statuses-count)
-26. [masto-account-url](#masto-account-url)
-27. [masto-account-username](#masto-account-username)
-28. [masto-account?](#masto-account)
-29. [masto-emoji-shortcode](#masto-emoji-shortcode)
-30. [masto-emoji-static-url](#masto-emoji-static-url)
-31. [masto-emoji-url](#masto-emoji-url)
-32. [masto-emoji-visible-in-picker?](#masto-emoji-visible-in-picker)
-33. [masto-emoji?](#masto-emoji)
-34. [masto-field-name](#masto-field-name)
-35. [masto-field-value](#masto-field-value)
-36. [masto-field-verified-at](#masto-field-verified-at)
-37. [masto-field?](#masto-field)
-38. [masto-instance-contact-account](#masto-instance-contact-account)
-39. [masto-instance-description](#masto-instance-description)
-40. [masto-instance-email](#masto-instance-email)
-41. [masto-instance-languages](#masto-instance-languages)
-42. [masto-instance-short-description](#masto-instance-short-description)
-43. [masto-instance-stats](#masto-instance-stats)
-44. [masto-instance-stats-domain-count](#masto-instance-stats-domain-count)
-45. [masto-instance-stats-status-count](#masto-instance-stats-status-count)
-46. [masto-instance-stats-user-count](#masto-instance-stats-user-count)
-47. [masto-instance-stats?](#masto-instance-stats)
-48. [masto-instance-thumbnail](#masto-instance-thumbnail)
-49. [masto-instance-title](#masto-instance-title)
-50. [masto-instance-uri](#masto-instance-uri)
-51. [masto-instance-urls](#masto-instance-urls)
-52. [masto-instance-urls-streaming-api](#masto-instance-urls-streaming-api)
-53. [masto-instance-urls?](#masto-instance-urls)
-54. [masto-instance-version](#masto-instance-version)
-55. [masto-instance?](#masto-instance)
-56. [masto-instance-info](#masto-instance-info)
+22. [masto-account-last-status-at](#masto-account-last-status-at)
+23. [masto-account-locked?](#masto-account-locked)
+24. [masto-account-moved](#masto-account-moved)
+25. [masto-account-note](#masto-account-note)
+26. [masto-account-statuses-count](#masto-account-statuses-count)
+27. [masto-account-url](#masto-account-url)
+28. [masto-account-username](#masto-account-username)
+29. [masto-account?](#masto-account)
+30. [masto-emoji-shortcode](#masto-emoji-shortcode)
+31. [masto-emoji-static-url](#masto-emoji-static-url)
+32. [masto-emoji-url](#masto-emoji-url)
+33. [masto-emoji-visible-in-picker?](#masto-emoji-visible-in-picker)
+34. [masto-emoji?](#masto-emoji)
+35. [masto-field-name](#masto-field-name)
+36. [masto-field-value](#masto-field-value)
+37. [masto-field-verified-at](#masto-field-verified-at)
+38. [masto-field?](#masto-field)
+39. [masto-instance-contact-account](#masto-instance-contact-account)
+40. [masto-instance-description](#masto-instance-description)
+41. [masto-instance-email](#masto-instance-email)
+42. [masto-instance-languages](#masto-instance-languages)
+43. [masto-instance-short-description](#masto-instance-short-description)
+44. [masto-instance-stats](#masto-instance-stats)
+45. [masto-instance-stats-domain-count](#masto-instance-stats-domain-count)
+46. [masto-instance-stats-status-count](#masto-instance-stats-status-count)
+47. [masto-instance-stats-user-count](#masto-instance-stats-user-count)
+48. [masto-instance-stats?](#masto-instance-stats)
+49. [masto-instance-thumbnail](#masto-instance-thumbnail)
+50. [masto-instance-title](#masto-instance-title)
+51. [masto-instance-uri](#masto-instance-uri)
+52. [masto-instance-urls](#masto-instance-urls)
+53. [masto-instance-urls-streaming-api](#masto-instance-urls-streaming-api)
+54. [masto-instance-urls?](#masto-instance-urls)
+55. [masto-instance-version](#masto-instance-version)
+56. [masto-instance?](#masto-instance)
+57. [masto-instance-info](#masto-instance-info)
 
 
 <br />
@@ -80,6 +81,7 @@ A record object that can be returned by an API call.
 > `followersCount` <br />
 > `followingCount` <br />
 > `statusesCount` <br />
+> `lastStatusAt` <br />
 > `note` <br />
 > `url` <br />
 > `avatar` <br />
@@ -262,6 +264,14 @@ A record object that can be returned by an API call.
 <br />
 
 ### masto-account-id
+##### Summary
+#f
+##### Parameters
+> ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) `s` <br />
+
+<br />
+
+### masto-account-last-status-at
 ##### Summary
 #f
 ##### Parameters

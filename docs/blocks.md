@@ -24,40 +24,41 @@
 18. [masto-account-header](#masto-account-header)
 19. [masto-account-header-static](#masto-account-header-static)
 20. [masto-account-id](#masto-account-id)
-21. [masto-account-locked?](#masto-account-locked)
-22. [masto-account-moved](#masto-account-moved)
-23. [masto-account-note](#masto-account-note)
-24. [masto-account-statuses-count](#masto-account-statuses-count)
-25. [masto-account-url](#masto-account-url)
-26. [masto-account-username](#masto-account-username)
-27. [masto-account?](#masto-account)
-28. [masto-emoji-shortcode](#masto-emoji-shortcode)
-29. [masto-emoji-static-url](#masto-emoji-static-url)
-30. [masto-emoji-url](#masto-emoji-url)
-31. [masto-emoji-visible-in-picker?](#masto-emoji-visible-in-picker)
-32. [masto-emoji?](#masto-emoji)
-33. [masto-field-name](#masto-field-name)
-34. [masto-field-value](#masto-field-value)
-35. [masto-field-verified-at](#masto-field-verified-at)
-36. [masto-field?](#masto-field)
-37. [masto-page-next](#masto-page-next)
-38. [masto-page-objects](#masto-page-objects)
-39. [masto-page-prev](#masto-page-prev)
-40. [masto-page?](#masto-page)
-41. [masto-relationship-blocking](#masto-relationship-blocking)
-42. [masto-relationship-domain-blocking](#masto-relationship-domain-blocking)
-43. [masto-relationship-endorsed](#masto-relationship-endorsed)
-44. [masto-relationship-followed-by](#masto-relationship-followed-by)
-45. [masto-relationship-following](#masto-relationship-following)
-46. [masto-relationship-id](#masto-relationship-id)
-47. [masto-relationship-muting](#masto-relationship-muting)
-48. [masto-relationship-muting-notifications](#masto-relationship-muting-notifications)
-49. [masto-relationship-requested](#masto-relationship-requested)
-50. [masto-relationship-showing-reblogs](#masto-relationship-showing-reblogs)
-51. [masto-relationship?](#masto-relationship)
-52. [masto-block-account](#masto-block-account)
-53. [masto-blocks-all](#masto-blocks-all)
-54. [masto-unblock-account](#masto-unblock-account)
+21. [masto-account-last-status-at](#masto-account-last-status-at)
+22. [masto-account-locked?](#masto-account-locked)
+23. [masto-account-moved](#masto-account-moved)
+24. [masto-account-note](#masto-account-note)
+25. [masto-account-statuses-count](#masto-account-statuses-count)
+26. [masto-account-url](#masto-account-url)
+27. [masto-account-username](#masto-account-username)
+28. [masto-account?](#masto-account)
+29. [masto-emoji-shortcode](#masto-emoji-shortcode)
+30. [masto-emoji-static-url](#masto-emoji-static-url)
+31. [masto-emoji-url](#masto-emoji-url)
+32. [masto-emoji-visible-in-picker?](#masto-emoji-visible-in-picker)
+33. [masto-emoji?](#masto-emoji)
+34. [masto-field-name](#masto-field-name)
+35. [masto-field-value](#masto-field-value)
+36. [masto-field-verified-at](#masto-field-verified-at)
+37. [masto-field?](#masto-field)
+38. [masto-page-next](#masto-page-next)
+39. [masto-page-objects](#masto-page-objects)
+40. [masto-page-prev](#masto-page-prev)
+41. [masto-page?](#masto-page)
+42. [masto-relationship-blocking](#masto-relationship-blocking)
+43. [masto-relationship-domain-blocking](#masto-relationship-domain-blocking)
+44. [masto-relationship-endorsed](#masto-relationship-endorsed)
+45. [masto-relationship-followed-by](#masto-relationship-followed-by)
+46. [masto-relationship-following](#masto-relationship-following)
+47. [masto-relationship-id](#masto-relationship-id)
+48. [masto-relationship-muting](#masto-relationship-muting)
+49. [masto-relationship-muting-notifications](#masto-relationship-muting-notifications)
+50. [masto-relationship-requested](#masto-relationship-requested)
+51. [masto-relationship-showing-reblogs](#masto-relationship-showing-reblogs)
+52. [masto-relationship?](#masto-relationship)
+53. [masto-block-account](#masto-block-account)
+54. [masto-blocks-all](#masto-blocks-all)
+55. [masto-unblock-account](#masto-unblock-account)
 
 
 <br />
@@ -78,6 +79,7 @@ A record object that can be returned by an API call.
 > `followersCount` <br />
 > `followingCount` <br />
 > `statusesCount` <br />
+> `lastStatusAt` <br />
 > `note` <br />
 > `url` <br />
 > `avatar` <br />
@@ -255,6 +257,14 @@ A record object that can be returned by an API call.
 <br />
 
 ### masto-account-id
+##### Summary
+#f
+##### Parameters
+> ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) `s` <br />
+
+<br />
+
+### masto-account-last-status-at
 ##### Summary
 #f
 ##### Parameters

@@ -23,29 +23,30 @@
 17. [masto-account-header](#masto-account-header)
 18. [masto-account-header-static](#masto-account-header-static)
 19. [masto-account-id](#masto-account-id)
-20. [masto-account-locked?](#masto-account-locked)
-21. [masto-account-moved](#masto-account-moved)
-22. [masto-account-note](#masto-account-note)
-23. [masto-account-statuses-count](#masto-account-statuses-count)
-24. [masto-account-url](#masto-account-url)
-25. [masto-account-username](#masto-account-username)
-26. [masto-account?](#masto-account)
-27. [masto-emoji-shortcode](#masto-emoji-shortcode)
-28. [masto-emoji-static-url](#masto-emoji-static-url)
-29. [masto-emoji-url](#masto-emoji-url)
-30. [masto-emoji-visible-in-picker?](#masto-emoji-visible-in-picker)
-31. [masto-emoji?](#masto-emoji)
-32. [masto-field-name](#masto-field-name)
-33. [masto-field-value](#masto-field-value)
-34. [masto-field-verified-at](#masto-field-verified-at)
-35. [masto-field?](#masto-field)
-36. [masto-page-next](#masto-page-next)
-37. [masto-page-objects](#masto-page-objects)
-38. [masto-page-prev](#masto-page-prev)
-39. [masto-page?](#masto-page)
-40. [masto-follow-request-authorize](#masto-follow-request-authorize)
-41. [masto-follow-request-reject](#masto-follow-request-reject)
-42. [masto-follow-requests-all](#masto-follow-requests-all)
+20. [masto-account-last-status-at](#masto-account-last-status-at)
+21. [masto-account-locked?](#masto-account-locked)
+22. [masto-account-moved](#masto-account-moved)
+23. [masto-account-note](#masto-account-note)
+24. [masto-account-statuses-count](#masto-account-statuses-count)
+25. [masto-account-url](#masto-account-url)
+26. [masto-account-username](#masto-account-username)
+27. [masto-account?](#masto-account)
+28. [masto-emoji-shortcode](#masto-emoji-shortcode)
+29. [masto-emoji-static-url](#masto-emoji-static-url)
+30. [masto-emoji-url](#masto-emoji-url)
+31. [masto-emoji-visible-in-picker?](#masto-emoji-visible-in-picker)
+32. [masto-emoji?](#masto-emoji)
+33. [masto-field-name](#masto-field-name)
+34. [masto-field-value](#masto-field-value)
+35. [masto-field-verified-at](#masto-field-verified-at)
+36. [masto-field?](#masto-field)
+37. [masto-page-next](#masto-page-next)
+38. [masto-page-objects](#masto-page-objects)
+39. [masto-page-prev](#masto-page-prev)
+40. [masto-page?](#masto-page)
+41. [masto-follow-request-authorize](#masto-follow-request-authorize)
+42. [masto-follow-request-reject](#masto-follow-request-reject)
+43. [masto-follow-requests-all](#masto-follow-requests-all)
 
 
 <br />
@@ -66,6 +67,7 @@ A record object that can be returned by an API call.
 > `followersCount` <br />
 > `followingCount` <br />
 > `statusesCount` <br />
+> `lastStatusAt` <br />
 > `note` <br />
 > `url` <br />
 > `avatar` <br />
@@ -226,6 +228,14 @@ A record object that can be returned by an API call.
 <br />
 
 ### masto-account-id
+##### Summary
+#f
+##### Parameters
+> ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) `s` <br />
+
+<br />
+
+### masto-account-last-status-at
 ##### Summary
 #f
 ##### Parameters

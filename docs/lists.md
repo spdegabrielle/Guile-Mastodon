@@ -24,38 +24,39 @@
 18. [masto-account-header](#masto-account-header)
 19. [masto-account-header-static](#masto-account-header-static)
 20. [masto-account-id](#masto-account-id)
-21. [masto-account-locked?](#masto-account-locked)
-22. [masto-account-moved](#masto-account-moved)
-23. [masto-account-note](#masto-account-note)
-24. [masto-account-statuses-count](#masto-account-statuses-count)
-25. [masto-account-url](#masto-account-url)
-26. [masto-account-username](#masto-account-username)
-27. [masto-account?](#masto-account)
-28. [masto-accounts-by-list](#masto-accounts-by-list)
-29. [masto-emoji-shortcode](#masto-emoji-shortcode)
-30. [masto-emoji-static-url](#masto-emoji-static-url)
-31. [masto-emoji-url](#masto-emoji-url)
-32. [masto-emoji-visible-in-picker?](#masto-emoji-visible-in-picker)
-33. [masto-emoji?](#masto-emoji)
-34. [masto-field-name](#masto-field-name)
-35. [masto-field-value](#masto-field-value)
-36. [masto-field-verified-at](#masto-field-verified-at)
-37. [masto-field?](#masto-field)
-38. [masto-page-next](#masto-page-next)
-39. [masto-page-objects](#masto-page-objects)
-40. [masto-page-prev](#masto-page-prev)
-41. [masto-page?](#masto-page)
-42. [masto-list-id](#masto-list-id)
-43. [masto-list-title](#masto-list-title)
-44. [masto-list?](#masto-list)
-45. [masto-list-add-account](#masto-list-add-account)
-46. [masto-list-create](#masto-list-create)
-47. [masto-list-delete](#masto-list-delete)
-48. [masto-list-delete-account](#masto-list-delete-account)
-49. [masto-list-get](#masto-list-get)
-50. [masto-list-update](#masto-list-update)
-51. [masto-lists-all](#masto-lists-all)
-52. [masto-lists-by-account](#masto-lists-by-account)
+21. [masto-account-last-status-at](#masto-account-last-status-at)
+22. [masto-account-locked?](#masto-account-locked)
+23. [masto-account-moved](#masto-account-moved)
+24. [masto-account-note](#masto-account-note)
+25. [masto-account-statuses-count](#masto-account-statuses-count)
+26. [masto-account-url](#masto-account-url)
+27. [masto-account-username](#masto-account-username)
+28. [masto-account?](#masto-account)
+29. [masto-accounts-by-list](#masto-accounts-by-list)
+30. [masto-emoji-shortcode](#masto-emoji-shortcode)
+31. [masto-emoji-static-url](#masto-emoji-static-url)
+32. [masto-emoji-url](#masto-emoji-url)
+33. [masto-emoji-visible-in-picker?](#masto-emoji-visible-in-picker)
+34. [masto-emoji?](#masto-emoji)
+35. [masto-field-name](#masto-field-name)
+36. [masto-field-value](#masto-field-value)
+37. [masto-field-verified-at](#masto-field-verified-at)
+38. [masto-field?](#masto-field)
+39. [masto-page-next](#masto-page-next)
+40. [masto-page-objects](#masto-page-objects)
+41. [masto-page-prev](#masto-page-prev)
+42. [masto-page?](#masto-page)
+43. [masto-list-id](#masto-list-id)
+44. [masto-list-title](#masto-list-title)
+45. [masto-list?](#masto-list)
+46. [masto-list-add-account](#masto-list-add-account)
+47. [masto-list-create](#masto-list-create)
+48. [masto-list-delete](#masto-list-delete)
+49. [masto-list-delete-account](#masto-list-delete-account)
+50. [masto-list-get](#masto-list-get)
+51. [masto-list-update](#masto-list-update)
+52. [masto-lists-all](#masto-lists-all)
+53. [masto-lists-by-account](#masto-lists-by-account)
 
 
 <br />
@@ -76,6 +77,7 @@ A record object that can be returned by an API call.
 > `followersCount` <br />
 > `followingCount` <br />
 > `statusesCount` <br />
+> `lastStatusAt` <br />
 > `note` <br />
 > `url` <br />
 > `avatar` <br />
@@ -245,6 +247,14 @@ A record object that can be returned by an API call.
 <br />
 
 ### masto-account-id
+##### Summary
+#f
+##### Parameters
+> ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) `s` <br />
+
+<br />
+
+### masto-account-last-status-at
 ##### Summary
 #f
 ##### Parameters
