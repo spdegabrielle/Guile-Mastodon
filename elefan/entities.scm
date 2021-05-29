@@ -27,13 +27,14 @@
             <mastodon-account> masto-account? masto-account-id              masto-account-username
                                               masto-account-acct            masto-account-display-name
                                               masto-account-locked?         masto-account-bot?
-                                              masto-account-discoverable?   masto-account-created-at
-                                              masto-account-followers-count masto-account-following-count
-                                              masto-account-statuses-count  masto-account-note
-                                              masto-account-url             masto-account-avatar
-                                              masto-account-avatar-static   masto-account-header
-                                              masto-account-header-static   masto-account-emojis
-                                              masto-account-moved           masto-account-fields
+                                              masto-account-discoverable?   masto-account-group?
+                                              masto-account-created-at      masto-account-followers-count
+                                              masto-account-following-count masto-account-statuses-count
+                                              masto-account-note            masto-account-url
+                                              masto-account-avatar          masto-account-avatar-static
+                                              masto-account-header          masto-account-header-static
+                                              masto-account-emojis          masto-account-moved
+                                              masto-account-fields
             generate-masto-account
             generate-masto-account-array
             <mastodon-relationship> masto-relationship? masto-relationship-id
@@ -344,11 +345,11 @@
   (verifiedAt masto-field-verified-at masto-field-verified-at-set!))
 
 (define-record-type <mastodon-account>
-  (make-masto-account id             username       acct          displayName
-                      locked         bot            discoverable  createdAt
-                      followersCount followingCount statusesCount note
-                      url            avatar         avatarStatic  header
-                      headerStatic   emojis         moved         fields)
+  (make-masto-account id        username       acct           displayName
+                      locked    bot            discoverable   group
+                      createdAt followersCount followingCount statusesCount
+                      note      url            avatar         avatarStatic
+                      header    headerStatic   emojis         moved         fields)
   masto-account?
   (id             masto-account-id              masto-account-id-set!)
   (username       masto-account-username        masto-account-username-set!)
@@ -357,6 +358,7 @@
   (locked         masto-account-locked?         masto-account-locked-set!)
   (bot            masto-account-bot?            masto-account-bot-set!)
   (discoverable   masto-account-discoverable?   masto-account-discoverable-set!)
+  (group          masto-account-group?          masto-account-group-set!)
   (createdAt      masto-account-created-at      masto-account-created-at-set!)
   (followersCount masto-account-followers-count masto-account-followers-count-set!)
   (followingCount masto-account-following-count masto-account-following-count-set!)
@@ -380,6 +382,7 @@
     ["locked"]
     ["bot"]
     ["discoverable"]
+    ["group"]
     ["created_at"      masto-string->date]
     ["followers_count"]
     ["following_count"]

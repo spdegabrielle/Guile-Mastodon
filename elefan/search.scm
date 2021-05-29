@@ -17,6 +17,7 @@
                                                  masto-account-locked?
                                                  masto-account-bot?
                                                  masto-account-discoverable?
+                                                 masto-account-group?
                                                  masto-account-created-at
                                                  masto-account-followers-count
                                                  masto-account-following-count
