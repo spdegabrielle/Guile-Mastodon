@@ -25,7 +25,7 @@
 14. [masto-app-token](#masto-app-token)
 15. [masto-app-verify-cred](#masto-app-verify-cred)
 16. [masto-app-website](#masto-app-website)
-17. [masto-instance-app?](#masto-instance-app?)
+17. [masto-instance-app?](#masto-instance-app)
 
 
 <br />

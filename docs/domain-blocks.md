@@ -9,7 +9,7 @@
 3. [masto-page-next](#masto-page-next)
 4. [masto-page-objects](#masto-page-objects)
 5. [masto-page-prev](#masto-page-prev)
-6. [masto-page?](#masto-page?)
+6. [masto-page?](#masto-page)
 7. [masto-unblock-domain](#masto-unblock-domain)
 8. [masto-domain-blocks-all](#masto-domain-blocks-all)
 

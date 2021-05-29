@@ -8,8 +8,8 @@
 2. [masto-emoji-shortcode](#masto-emoji-shortcode)
 3. [masto-emoji-static-url](#masto-emoji-static-url)
 4. [masto-emoji-url](#masto-emoji-url)
-5. [masto-emoji-visible-in-picker?](#masto-emoji-visible-in-picker?)
-6. [masto-emoji?](#masto-emoji?)
+5. [masto-emoji-visible-in-picker?](#masto-emoji-visible-in-picker)
+6. [masto-emoji?](#masto-emoji)
 7. [masto-emojis-on-instance](#masto-emojis-on-instance)
 
 

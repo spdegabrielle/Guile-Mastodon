@@ -17,13 +17,13 @@
 11. [masto-attachment-text-url](#masto-attachment-text-url)
 12. [masto-attachment-type](#masto-attachment-type)
 13. [masto-attachment-url](#masto-attachment-url)
-14. [masto-attachment?](#masto-attachment?)
+14. [masto-attachment?](#masto-attachment)
 15. [masto-media-update](#masto-media-update)
 16. [masto-media-upload](#masto-media-upload)
 17. [masto-meta-focus](#masto-meta-focus)
 18. [masto-meta-focus-x](#masto-meta-focus-x)
 19. [masto-meta-focus-y](#masto-meta-focus-y)
-20. [masto-meta-focus?](#masto-meta-focus?)
+20. [masto-meta-focus?](#masto-meta-focus)
 21. [masto-meta-original](#masto-meta-original)
 22. [masto-meta-small](#masto-meta-small)
 23. [masto-meta-subtree-aspect](#masto-meta-subtree-aspect)
@@ -33,8 +33,8 @@
 27. [masto-meta-subtree-height](#masto-meta-subtree-height)
 28. [masto-meta-subtree-size](#masto-meta-subtree-size)
 29. [masto-meta-subtree-width](#masto-meta-subtree-width)
-30. [masto-meta-subtree?](#masto-meta-subtree?)
-31. [masto-meta?](#masto-meta?)
+30. [masto-meta-subtree?](#masto-meta-subtree)
+31. [masto-meta?](#masto-meta)
 
 
 <br />

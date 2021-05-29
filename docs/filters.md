@@ -11,7 +11,7 @@
 5. [masto-filter-irreversible](#masto-filter-irreversible)
 6. [masto-filter-phrase](#masto-filter-phrase)
 7. [masto-filter-whole-word](#masto-filter-whole-word)
-8. [masto-filter?](#masto-filter?)
+8. [masto-filter?](#masto-filter)
 9. [masto-filter-create](#masto-filter-create)
 10. [masto-filter-delete](#masto-filter-delete)
 11. [masto-filter-get](#masto-filter-get)

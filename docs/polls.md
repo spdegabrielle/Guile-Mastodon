@@ -12,11 +12,11 @@
 6. [masto-poll-multiple](#masto-poll-multiple)
 7. [masto-poll-option-title](#masto-poll-option-title)
 8. [masto-poll-option-votes-count](#masto-poll-option-votes-count)
-9. [masto-poll-option?](#masto-poll-option?)
+9. [masto-poll-option?](#masto-poll-option)
 10. [masto-poll-options](#masto-poll-options)
 11. [masto-poll-voted](#masto-poll-voted)
 12. [masto-poll-votes-count](#masto-poll-votes-count)
-13. [masto-poll?](#masto-poll?)
+13. [masto-poll?](#masto-poll)
 14. [masto-poll-get](#masto-poll-get)
 15. [masto-poll-send-vote](#masto-poll-send-vote)
 
