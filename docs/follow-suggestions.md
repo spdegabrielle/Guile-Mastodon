@@ -18,27 +18,28 @@
 12. [masto-account-fields](#masto-account-fields)
 13. [masto-account-followers-count](#masto-account-followers-count)
 14. [masto-account-following-count](#masto-account-following-count)
-15. [masto-account-header](#masto-account-header)
-16. [masto-account-header-static](#masto-account-header-static)
-17. [masto-account-id](#masto-account-id)
-18. [masto-account-locked?](#masto-account-locked)
-19. [masto-account-moved](#masto-account-moved)
-20. [masto-account-note](#masto-account-note)
-21. [masto-account-statuses-count](#masto-account-statuses-count)
-22. [masto-account-url](#masto-account-url)
-23. [masto-account-username](#masto-account-username)
-24. [masto-account?](#masto-account)
-25. [masto-emoji-shortcode](#masto-emoji-shortcode)
-26. [masto-emoji-static-url](#masto-emoji-static-url)
-27. [masto-emoji-url](#masto-emoji-url)
-28. [masto-emoji-visible-in-picker?](#masto-emoji-visible-in-picker)
-29. [masto-emoji?](#masto-emoji)
-30. [masto-field-name](#masto-field-name)
-31. [masto-field-value](#masto-field-value)
-32. [masto-field-verified-at](#masto-field-verified-at)
-33. [masto-field?](#masto-field)
-34. [masto-follow-suggestion-delete](#masto-follow-suggestion-delete)
-35. [masto-follow-suggestions-all](#masto-follow-suggestions-all)
+15. [masto-account-group?](#masto-account-group)
+16. [masto-account-header](#masto-account-header)
+17. [masto-account-header-static](#masto-account-header-static)
+18. [masto-account-id](#masto-account-id)
+19. [masto-account-locked?](#masto-account-locked)
+20. [masto-account-moved](#masto-account-moved)
+21. [masto-account-note](#masto-account-note)
+22. [masto-account-statuses-count](#masto-account-statuses-count)
+23. [masto-account-url](#masto-account-url)
+24. [masto-account-username](#masto-account-username)
+25. [masto-account?](#masto-account)
+26. [masto-emoji-shortcode](#masto-emoji-shortcode)
+27. [masto-emoji-static-url](#masto-emoji-static-url)
+28. [masto-emoji-url](#masto-emoji-url)
+29. [masto-emoji-visible-in-picker?](#masto-emoji-visible-in-picker)
+30. [masto-emoji?](#masto-emoji)
+31. [masto-field-name](#masto-field-name)
+32. [masto-field-value](#masto-field-value)
+33. [masto-field-verified-at](#masto-field-verified-at)
+34. [masto-field?](#masto-field)
+35. [masto-follow-suggestion-delete](#masto-follow-suggestion-delete)
+36. [masto-follow-suggestions-all](#masto-follow-suggestions-all)
 
 
 <br />
@@ -54,6 +55,7 @@ A record object that can be returned by an API call.
 > `locked` <br />
 > `bot` <br />
 > `discoverable` <br />
+> `group` <br />
 > `createdAt` <br />
 > `followersCount` <br />
 > `followingCount` <br />
@@ -172,6 +174,14 @@ A record object that can be returned by an API call.
 <br />
 
 ### masto-account-following-count
+##### Summary
+#f
+##### Parameters
+> ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) `s` <br />
+
+<br />
+
+### masto-account-group?
 ##### Summary
 #f
 ##### Parameters

@@ -20,41 +20,42 @@
 14. [masto-account-fields](#masto-account-fields)
 15. [masto-account-followers-count](#masto-account-followers-count)
 16. [masto-account-following-count](#masto-account-following-count)
-17. [masto-account-header](#masto-account-header)
-18. [masto-account-header-static](#masto-account-header-static)
-19. [masto-account-id](#masto-account-id)
-20. [masto-account-locked?](#masto-account-locked)
-21. [masto-account-moved](#masto-account-moved)
-22. [masto-account-note](#masto-account-note)
-23. [masto-account-statuses-count](#masto-account-statuses-count)
-24. [masto-account-url](#masto-account-url)
-25. [masto-account-username](#masto-account-username)
-26. [masto-account?](#masto-account)
-27. [masto-accounts-by-list](#masto-accounts-by-list)
-28. [masto-emoji-shortcode](#masto-emoji-shortcode)
-29. [masto-emoji-static-url](#masto-emoji-static-url)
-30. [masto-emoji-url](#masto-emoji-url)
-31. [masto-emoji-visible-in-picker?](#masto-emoji-visible-in-picker)
-32. [masto-emoji?](#masto-emoji)
-33. [masto-field-name](#masto-field-name)
-34. [masto-field-value](#masto-field-value)
-35. [masto-field-verified-at](#masto-field-verified-at)
-36. [masto-field?](#masto-field)
-37. [masto-page-next](#masto-page-next)
-38. [masto-page-objects](#masto-page-objects)
-39. [masto-page-prev](#masto-page-prev)
-40. [masto-page?](#masto-page)
-41. [masto-list-id](#masto-list-id)
-42. [masto-list-title](#masto-list-title)
-43. [masto-list?](#masto-list)
-44. [masto-list-add-account](#masto-list-add-account)
-45. [masto-list-create](#masto-list-create)
-46. [masto-list-delete](#masto-list-delete)
-47. [masto-list-delete-account](#masto-list-delete-account)
-48. [masto-list-get](#masto-list-get)
-49. [masto-list-update](#masto-list-update)
-50. [masto-lists-all](#masto-lists-all)
-51. [masto-lists-by-account](#masto-lists-by-account)
+17. [masto-account-group?](#masto-account-group)
+18. [masto-account-header](#masto-account-header)
+19. [masto-account-header-static](#masto-account-header-static)
+20. [masto-account-id](#masto-account-id)
+21. [masto-account-locked?](#masto-account-locked)
+22. [masto-account-moved](#masto-account-moved)
+23. [masto-account-note](#masto-account-note)
+24. [masto-account-statuses-count](#masto-account-statuses-count)
+25. [masto-account-url](#masto-account-url)
+26. [masto-account-username](#masto-account-username)
+27. [masto-account?](#masto-account)
+28. [masto-accounts-by-list](#masto-accounts-by-list)
+29. [masto-emoji-shortcode](#masto-emoji-shortcode)
+30. [masto-emoji-static-url](#masto-emoji-static-url)
+31. [masto-emoji-url](#masto-emoji-url)
+32. [masto-emoji-visible-in-picker?](#masto-emoji-visible-in-picker)
+33. [masto-emoji?](#masto-emoji)
+34. [masto-field-name](#masto-field-name)
+35. [masto-field-value](#masto-field-value)
+36. [masto-field-verified-at](#masto-field-verified-at)
+37. [masto-field?](#masto-field)
+38. [masto-page-next](#masto-page-next)
+39. [masto-page-objects](#masto-page-objects)
+40. [masto-page-prev](#masto-page-prev)
+41. [masto-page?](#masto-page)
+42. [masto-list-id](#masto-list-id)
+43. [masto-list-title](#masto-list-title)
+44. [masto-list?](#masto-list)
+45. [masto-list-add-account](#masto-list-add-account)
+46. [masto-list-create](#masto-list-create)
+47. [masto-list-delete](#masto-list-delete)
+48. [masto-list-delete-account](#masto-list-delete-account)
+49. [masto-list-get](#masto-list-get)
+50. [masto-list-update](#masto-list-update)
+51. [masto-lists-all](#masto-lists-all)
+52. [masto-lists-by-account](#masto-lists-by-account)
 
 
 <br />
@@ -70,6 +71,7 @@ A record object that can be returned by an API call.
 > `locked` <br />
 > `bot` <br />
 > `discoverable` <br />
+> `group` <br />
 > `createdAt` <br />
 > `followersCount` <br />
 > `followingCount` <br />
@@ -211,6 +213,14 @@ A record object that can be returned by an API call.
 <br />
 
 ### masto-account-following-count
+##### Summary
+#f
+##### Parameters
+> ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) `s` <br />
+
+<br />
+
+### masto-account-group?
 ##### Summary
 #f
 ##### Parameters
