@@ -21,7 +21,7 @@
 15. [masto-account-header](#masto-account-header)
 16. [masto-account-header-static](#masto-account-header-static)
 17. [masto-account-id](#masto-account-id)
-18. [masto-account-locked](#masto-account-locked)
+18. [masto-account-locked?](#masto-account-locked)
 19. [masto-account-moved](#masto-account-moved)
 20. [masto-account-note](#masto-account-note)
 21. [masto-account-statuses-count](#masto-account-statuses-count)
@@ -213,7 +213,7 @@ A record object that can be returned by an API call.
 
 <br />
 
-### masto-account-locked
+### masto-account-locked?
 ##### Summary
 #f
 ##### Parameters

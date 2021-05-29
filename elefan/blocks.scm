@@ -19,7 +19,7 @@
                                                  masto-account-username
                                                  masto-account-acct
                                                  masto-account-display-name
-                                                 masto-account-locked
+                                                 masto-account-locked?
                                                  masto-account-created-at
                                                  masto-account-followers-count
                                                  masto-account-following-count

@@ -26,7 +26,7 @@
                                               masto-field-verified-at
             <mastodon-account> masto-account? masto-account-id              masto-account-username
                                               masto-account-acct            masto-account-display-name
-                                              masto-account-locked          masto-account-created-at
+                                              masto-account-locked?         masto-account-created-at
                                               masto-account-followers-count masto-account-following-count
                                               masto-account-statuses-count  masto-account-note
                                               masto-account-url             masto-account-avatar
@@ -355,7 +355,7 @@
   (username       masto-account-username        masto-account-username-set!)
   (acct           masto-account-acct            masto-account-acct-set!)
   (displayName    masto-account-display-name    masto-account-display-name-set!)
-  (locked         masto-account-locked          masto-account-locked-set!)
+  (locked         masto-account-locked?         masto-account-locked-set!)
   (createdAt      masto-account-created-at      masto-account-created-at-set!)
   (followersCount masto-account-followers-count masto-account-followers-count-set!)
   (followingCount masto-account-following-count masto-account-following-count-set!)
