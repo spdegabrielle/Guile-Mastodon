@@ -19,7 +19,7 @@
             masto-page-prev
             masto-page-next
             <mastodon-emoji>   masto-emoji?   masto-emoji-shortcode masto-emoji-static-url
-                                              masto-emoji-url       masto-emoji-visible-in-picker
+                                              masto-emoji-url       masto-emoji-visible-in-picker?
             generate-masto-emoji
             generate-masto-emoji-array
             <mastodon-field>   masto-field?   masto-field-name        masto-field-value
@@ -319,10 +319,10 @@
 (define-record-type <mastodon-emoji>
   (make-masto-emoji shortcode staticURL url visibleInPicker)
   masto-emoji?
-  (shortcode       masto-emoji-shortcode         masto-emoji-shortcode-set!)
-  (staticURL       masto-emoji-static-url        masto-emoji-static-url-set!)
-  (url             masto-emoji-url               masto-emoji-url-set!)
-  (visibleInPicker masto-emoji-visible-in-picker masto-emoji-visible-in-picker-set!))
+  (shortcode       masto-emoji-shortcode          masto-emoji-shortcode-set!)
+  (staticURL       masto-emoji-static-url         masto-emoji-static-url-set!)
+  (url             masto-emoji-url                masto-emoji-url-set!)
+  (visibleInPicker masto-emoji-visible-in-picker? masto-emoji-visible-in-picker-set!))
 
 (define (generate-masto-emoji emoji)
   (generate-masto-object make-masto-emoji emoji

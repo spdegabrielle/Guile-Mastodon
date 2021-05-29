@@ -30,7 +30,7 @@
 24. [masto-emoji-shortcode](#masto-emoji-shortcode)
 25. [masto-emoji-static-url](#masto-emoji-static-url)
 26. [masto-emoji-url](#masto-emoji-url)
-27. [masto-emoji-visible-in-picker](#masto-emoji-visible-in-picker)
+27. [masto-emoji-visible-in-picker?](#masto-emoji-visible-in-picker?)
 28. [masto-emoji?](#masto-emoji?)
 29. [masto-field-name](#masto-field-name)
 30. [masto-field-value](#masto-field-value)
@@ -273,7 +273,7 @@ A record object that can be returned by an API call.
 
 <br />
 
-### masto-emoji-visible-in-picker
+### masto-emoji-visible-in-picker?
 ##### Summary
 #f
 ##### Parameters

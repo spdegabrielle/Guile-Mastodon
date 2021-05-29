@@ -6,7 +6,7 @@
   #:re-export  (<mastodon-emoji> masto-emoji? masto-emoji-shortcode
                                               masto-emoji-static-url
                                               masto-emoji-url
-                                              masto-emoji-visible-in-picker))
+                                              masto-emoji-visible-in-picker?))
 
 (define (masto-emojis-on-instance domainOrApp)
   "Retrieve all emojis belonging to a particular instance.

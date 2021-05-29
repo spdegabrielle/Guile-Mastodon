@@ -10,7 +10,7 @@
                <mastodon-emoji>   masto-emoji?   masto-emoji-shortcode
                                                  masto-emoji-static-url
                                                  masto-emoji-url
-                                                 masto-emoji-visible-in-picker
+                                                 masto-emoji-visible-in-picker?
                <mastodon-field>   masto-field?   masto-field-name
                                                  masto-field-value
                                                  masto-field-verified-at

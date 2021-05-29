@@ -33,7 +33,7 @@
 27. [masto-emoji-shortcode](#masto-emoji-shortcode)
 28. [masto-emoji-static-url](#masto-emoji-static-url)
 29. [masto-emoji-url](#masto-emoji-url)
-30. [masto-emoji-visible-in-picker](#masto-emoji-visible-in-picker)
+30. [masto-emoji-visible-in-picker?](#masto-emoji-visible-in-picker?)
 31. [masto-emoji?](#masto-emoji?)
 32. [masto-field-name](#masto-field-name)
 33. [masto-field-value](#masto-field-value)
@@ -333,7 +333,7 @@ Find the original documentation [here](https://docs.joinmastodon.org/methods/tim
 
 <br />
 
-### masto-emoji-visible-in-picker
+### masto-emoji-visible-in-picker?
 ##### Summary
 #f
 ##### Parameters
